@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ChevronRight, Star } from "lucide-react";
+import { ChevronRight, Link, Star } from "lucide-react";
 import { StatsSection } from "@/components/stats-section";
 import { ProductCard } from "@/components/product-card";
 import { FeaturedInSection } from "@/components/featured-in-section";
 import { CommitmentSection } from "@/components/commitment-section";
 import { ReviewCard } from "@/components/review-card";
+import { FeaturedProduct } from "@/components/featured-product";
 
 export default function Home() {
   return (
@@ -194,6 +195,60 @@ export default function Home() {
       </section>
 
       {/* Detalle de productos destacados */}
+      <FeaturedProduct
+        title="Camiseta Signature"
+        description="Nuestra camiseta insignia, hecha con algodón orgánico de la más alta calidad. Diseñada para durar y mantener su forma y color lavado tras lavado."
+        price={34.99}
+        salePrice={29.99}
+        features={[
+          "100% algodón orgánico certificado",
+          "Teñido con tintes naturales",
+          "Disponible en 5 colores",
+        ]}
+      />
+      <FeaturedProduct
+        title="Jeans Premium"
+        description="Nuestros jeans premium combinan estilo clásico con tecnología moderna. El denim elástico proporciona comodidad durante todo el día sin perder su forma."
+        price={79.99}
+        salePrice={59.99}
+        features={[
+          "Denim sostenible de alta calidad",
+          "Corte moderno y cómodo",
+          "Disponible en varios lavados",
+        ]}
+        reversed
+      />
+
+      {/* CTA section  */}
+      <section className="py-12 md:py-24 bg-gray-900 text-white">
+        <div className="container px-4 md:px-6 max-w-5xl mx-auto">
+          <div className="grid gap-6 lg:grid-cols-2 items-center">
+            <div>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
+                La moda reimaginada. Por Ti.
+              </h2>
+              <p className="mt-4 text-gray-400 md:text-xl">
+                Descubre nuestra colección completa y encuentra tu estilo único
+                con prendas diseñadas para durar.
+              </p>
+              <Link href="/hombre">
+                <Button className="mt-6 bg-green-500 hover:bg-green-600">
+                  Explorar Colección
+                </Button>
+              </Link>
+            </div>
+            <div className="relative">
+              <Image
+                src="/placeholder.svg?height=500&width=800"
+                alt="Colección de ropa"
+                width={800}
+                height={500}
+                className="rounded-lg object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
