@@ -19,7 +19,7 @@ export function FeaturedProduct({
 }) {
   return (
     <section className="py-12 md:py-24">
-      <div className="container px-4 md:px-6">
+      <div className="container px-4 md:px-6 mx-auto">
         <div
           className={`grid gap-6 lg:grid-cols-2 items-center ${
             reversed ? "lg:grid-flow-dense" : ""
@@ -54,11 +54,11 @@ export function FeaturedProduct({
           <div className={reversed ? "lg:col-start-1" : ""}>
             <div className="relative rounded-lg overflow-hidden">
               <Image
-                src="/placeholder.svg?height=600&width=800"
+                src="/placeholder.svg"
                 alt={title}
                 width={800}
                 height={600}
-                className="object-cover aspect-[4/3]"
+                className="object-cover aspect-4/3"
               />
               <div className="absolute top-4 right-4 bg-black text-white text-xs font-bold px-2 py-1 rounded">
                 OFERTA

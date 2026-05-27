@@ -49,7 +49,7 @@ export function Header() {
             Mujer
           </Link>
           <Link
-            href="/Accesorios"
+            href="/accesorios"
             className="text-sm font-medium transition-colors hover:text-primary"
           >
             Accesorios

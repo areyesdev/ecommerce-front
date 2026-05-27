@@ -21,7 +21,7 @@ export function ProductCard({
         <Image
           src={imageSrc || "/placeholder.svg"}
           alt={name}
-          width={300}
+          width={400}
           height={300}
           className="object-cover transition-transform group-hover:scale-105"
         />
